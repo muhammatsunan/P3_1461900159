@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('/barang', BarangController::class);
+Route::resource('/pelanggan', PelangganController::class);

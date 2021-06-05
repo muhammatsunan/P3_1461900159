@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Barang;
+use App\Models\Pelanggan;
 
-class BarangController extends Controller
+class PelangganController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,10 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $barang = \App\Models\Barang::All();
-        return view('barang0159' , ['barang' => $barang]);
+        $pelanggan = \App\Models\Pelanggan::All();
+        return view('pelanggan0159' , ['pelanggan' => $pelanggan]);
     }
- 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +25,7 @@ class BarangController extends Controller
      */
     public function create()
     {
-        return view('tambah_barang0159');
+        //
     }
 
     /**
@@ -36,12 +36,7 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        Barang::create([
-            'nama' => $request->nama,
-            'harga' => $request->harga,           
-        ]);
-
-        return redirect('barang');
+        //
     }
 
     /**

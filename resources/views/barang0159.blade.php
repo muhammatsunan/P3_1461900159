@@ -47,7 +47,10 @@ Tambah Data </a>
 <td>
 <a href="{{ url('barang/' . $brg->id . '/edit' ) }}">Edit </a>
 
-<a href=""> Hapus</a>
+<form action="{{ url('barang/' . $brg->id) }}" method="post">
+            @csrf
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit">Delete</button>
 </td>
 </tr>
 @endforeach

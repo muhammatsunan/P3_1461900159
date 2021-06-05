@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 Route::resource('/barang', BarangController::class);
 Route::resource('/pelanggan', PelangganController::class);
+Route::get('/search', 'BarangController@search');
+    

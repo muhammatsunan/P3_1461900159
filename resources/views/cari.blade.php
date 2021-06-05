@@ -1,17 +1,3 @@
-<head>
-<meta name="viewport" content="width=device-width,
-initial-scale=1">
-<title>Data Barang</title>
-<h3>Data Barang</h3>
-<form action="{{route('barang.index')}}" method="GET">
-    <div class="input-group">
-<input type="text" class="form-control" name="cari" placeholder="Cari barang .." value="">
-<div class="input-group-append">
-<button type="submit" class="btn btn-primary">Cari</button>
-</div>
-</div>
-</form>
-<br>
 <style>
 table {
 border-collapse: collapse;
@@ -66,5 +52,3 @@ Tambah Data </a>
 @endforeach
 </table>
 </tbody>
-</div>
-</body>

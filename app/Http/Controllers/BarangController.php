@@ -12,9 +12,15 @@ class BarangController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $barang = \App\Models\Barang::All();
+        if($request)
+        {
+            $barang = Barang::where('nama', 'like', '%' .$request->cari. '%')->get();   
+        }else{
+            $barang = Barang::All();   
+        }
+        
         return view('barang0159' , ['barang' => $barang]);
     }
  
@@ -98,11 +104,7 @@ class BarangController extends Controller
 
         return redirect('barang');
     }
-    public function cari(Request $request)
-    {
-        $cari=$request->lihat;
-        $barang=DB::table('barang')->where('nama','like',"%".$cari."%")->paginate();
-        return view('barang0159',['barang' => $barang]);
 
-    }
+
+
 }

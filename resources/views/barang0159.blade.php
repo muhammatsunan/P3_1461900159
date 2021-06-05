@@ -5,7 +5,7 @@ initial-scale=1">
 <h3>Data Barang</h3>
 <form action="{{route('barang.index')}}" method="GET">
     <div class="input-group">
-<input type="text" class="form-control" name="cari" placeholder="Cari barang .." value="">
+<input type="text" class="form-control" name="cari" placeholder="Cari barang .." value="{{$request->cari}}">
 <div class="input-group-append">
 <button type="submit" class="btn btn-primary">Cari</button>
 </div>

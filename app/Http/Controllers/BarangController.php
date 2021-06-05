@@ -21,7 +21,7 @@ class BarangController extends Controller
             $barang = Barang::All();   
         }
         
-        return view('barang0159' , ['barang' => $barang]);
+        return view('barang0159' , compact('barang', 'request'));
     }
  
     /**

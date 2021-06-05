@@ -98,4 +98,11 @@ class BarangController extends Controller
 
         return redirect('barang');
     }
+    public function cari(Request $request)
+    {
+        $cari=$request->lihat;
+        $barang=DB::table('barang')->where('nama','like',"%".$cari."%")->paginate();
+        return view('barang0159',['barang' => $barang]);
+
+    }
 }

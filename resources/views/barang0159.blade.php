@@ -2,8 +2,13 @@
 <meta name="viewport" content="width=device-width,
 initial-scale=1">
 <title>Data Barang</title>
+<h3>Data Barang</h3>
+<p>CARI : <form action="/barang" method="GET"></p>
+<input type="text" name="lihat" placeholder="Cari barang .." value="{{ old('cari') }}">
+<input type="submit" value="CARI">
+</form>
+<br>
 <style>
-
 table {
 border-collapse: collapse;
 border-spacing: 0;
@@ -22,6 +27,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 padding: 8px 16px ;
 text-decoration: none;
 }
+
 </style>
 </head>
 <body>

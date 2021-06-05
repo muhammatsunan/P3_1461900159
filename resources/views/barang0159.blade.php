@@ -35,9 +35,11 @@ text-decoration: none;
 </style>
 </head>
 <body>
+<li><a  href="{{url('/barang')}}">Home</a></li>
+<li><a href="{{route( 'barang.create')}}">
+Tambah Data </a></li>
+<br>
 <div style="overflow-x:auto;">
-<a class="tambah" href="{{route( 'barang.create')}}">
-Tambah Data </a>
 <table>
 <thead>
 <tr>
